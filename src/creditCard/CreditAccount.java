@@ -13,9 +13,9 @@ public class CreditAccount extends Account {
     private Double limit = 0.0;
     private Double minimumPayment = 0.0;
 	
-	public CreditAccount(Customer customer, String accountNumber, List<AccountEntry> accountEntryList) {
-		super(customer, accountNumber, accountEntryList);
-		// TODO Auto-generated constructor stub
+	public CreditAccount(Customer customer, String accountNumber, LocalDate expirationDate) {
+		super(customer, accountNumber);
+		this.expirationDate = expirationDate;
 	}
 	public LocalDate getExpirationDate() {
 		return expirationDate;
@@ -35,7 +35,5 @@ public class CreditAccount extends Account {
 	public void setMinimumPayment(Double minimumPayment) {
 		this.minimumPayment = minimumPayment;
 	}
-	
-	
 	
 }

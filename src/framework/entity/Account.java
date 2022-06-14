@@ -11,7 +11,9 @@ public abstract class Account {
     private List<AccountEntry> accountEntryList;
     private InterestStrategy interestStrategy;
 
-    public Account(Customer customer, String accountNumber, List<AccountEntry> accountEntryList) {
+    protected Double balance = 0.0;
+
+    public Account(Customer customer, String accountNumber) {
         this.customer = customer;
         this.accountNumber = accountNumber;
         this.accountEntryList = accountEntryList;
